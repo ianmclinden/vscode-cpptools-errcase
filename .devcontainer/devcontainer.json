@@ -1,0 +1,21 @@
+{
+	"name": "itest",
+	"image": "ubuntu:noble",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": { },
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"upgradePackages": true,
+			"username": "vscode"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	},
+	"remoteUser": "vscode",
+	"updateRemoteUserUID": true,
+	"onCreateCommand": "sudo apt-get -y update && sudo apt-get -y install build-essential"
+}
